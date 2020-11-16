@@ -6,11 +6,6 @@
 #include "Button.h"
 #include "Message.h"
 
-
-//#include "WiFi.h"
-//#include <Button.h> //importing accelerometer class
-//#include <Message.h>
-//#include <Joystick.h> //importing joytick class
  
 const int X_pin = 32; // analog pin connected to X output
 const int Y_pin = 33; //analog pin connected to Y output
