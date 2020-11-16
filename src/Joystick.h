@@ -78,7 +78,7 @@ do {
  }
  
  if(SW == 0){
- message-> sendMessage("land");
+ message-> sendMessage("nothing");
  Serial.print("Joystick Button Pressed");
  Serial.println("");
   u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
