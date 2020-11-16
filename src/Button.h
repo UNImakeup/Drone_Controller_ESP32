@@ -40,11 +40,11 @@ class Button{
    String m;
  
      if (B == 0){
+      
          message->sendMessage("w");
-        // u8g2.setFont(u8g2_font_ncenB08_tr);
          Serial.println("Create Button");
+         // u8g2.setFont(u8g2_font_ncenB08_tr);
          //u8g2.setCursor(/* x=*/20, /* y=*/0);   
-       
     
      }   return m;
   }
