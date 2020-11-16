@@ -29,6 +29,11 @@ u8g2.enableUTF8Print(); // Enable UTF8 support for Arduino print（）function.
 message.wifi();//connection to Wifi
  
 }
+
+void writeOnScreen(String write){
+
+
+}
  
 // Loop must be at the bottom for the code in order to compile without errors
 void loop() {
