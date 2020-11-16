@@ -42,7 +42,7 @@ class Button{
      if (B == 0){
       
          message->sendMessage("w");
-         Serial.println("Create Button");
+           u8g2.print("Create");
          // u8g2.setFont(u8g2_font_ncenB08_tr);
          //u8g2.setCursor(/* x=*/20, /* y=*/0);   
     

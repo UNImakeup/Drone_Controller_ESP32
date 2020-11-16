@@ -22,7 +22,6 @@ class Joystick{
    int SW; //Joystick Button
  
    bool a = true;
-   String speed = "20";
  
    // Add public: to make the methods below accessible, otherwise, the previous private: would make everything private.
 public:
@@ -57,17 +56,7 @@ public:
  
   String movement(){
  
-     String m;
- 
-// To stop it repeatedly creating a new pixel.
- if(a == true){
- message-> sendMessage("command");
- //sendMessage("takeoff");
- a = false;
-     
-        }
- 
- 
+     String m; 
 do {
  
  if(joyX>1700 && joyX<1800){
@@ -78,7 +67,7 @@ do {
  }
  
  if(SW == 0){
-  message-> sendMessage("nothing");
+  message->sendMessage("nothing");
   u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
   u8g2.print("NOTHING");
   
@@ -86,24 +75,24 @@ do {
  Serial.println("");
  }
  if(joyY > 3000){
- message-> sendMessage("up " + speed);
+ message->sendMessage("up");
  u8g2.setCursor(20,34); 
  u8g2.print("UP");
 }
 if(joyY < 1000){
- message-> sendMessage("down " + speed);
+ message->sendMessage("down");
  u8g2.setCursor(0,34);   
-  u8g2.print("DOWN");
+  u8g2.print("Down");
 }
 if(joyX > 3000){
- message-> sendMessage("right " + speed);
+ message->sendMessage("right");
  u8g2.setCursor(0,34);   
-  u8g2.print("RIGHT");
+  u8g2.print("Right");
 }
 if(joyX < 1000){
-message->  sendMessage("left " + speed);
+message->sendMessage("left");
  u8g2.setCursor(0,34);    
-  u8g2.print("LEFT");
+  u8g2.print("Left");
 }
  } while ( u8g2.nextPage() );
  

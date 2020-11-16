@@ -15,8 +15,8 @@ class Message{
      }
  
 // Connecting to the drone wifi
-const char * ssid = "WAIOLESS";
-const char * password = "0102030405";
+const char * ssid = "aliersej";
+const char * password = "ganggang";
  
      //Wifi setup
 void wifi(){

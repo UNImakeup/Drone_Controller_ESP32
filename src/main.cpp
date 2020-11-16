@@ -9,8 +9,8 @@
  
 const int x = 32; // analog pin connected to X output
 const int y = 33; //analog pin connected to Y output
-const int sw = 18; // digital pin connected to switch output
-const int b = 17; // digital pin connected to button
+const int sw = 17; // digital pin connected to switch output
+const int b = 18; // digital pin connected to button
 bool a = true;
  
 // Creating a Udp connection including sendMessage method
@@ -44,8 +44,6 @@ void loop() {
  joystick.movement();
  Serial.println(button.movement());
  
-// Wait some time before running the loop again as to not flood the terminal with information.
- delay(500);
  
 }
  
