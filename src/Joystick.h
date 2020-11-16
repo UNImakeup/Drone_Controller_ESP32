@@ -78,11 +78,12 @@ do {
  }
  
  if(SW == 0){
- message-> sendMessage("nothing");
- Serial.print("Joystick Button Pressed");
- Serial.println("");
+  message-> sendMessage("nothing");
   u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
   u8g2.print("NOTHING");
+  
+  Serial.print("Joystick Button Pressed");
+ Serial.println("");
  }
  if(joyY > 3000){
  message-> sendMessage("up " + speed);
