@@ -62,7 +62,7 @@ void wifi(){
       void sendMessage(String msg){
  
        udp.writeTo((const uint8_t *)msg.c_str(), msg.length(),
-        IPAddress(192,168,1,3), 7000);
+      IPAddress(192, 168, 43, 254), 6000);
  
        }
       
