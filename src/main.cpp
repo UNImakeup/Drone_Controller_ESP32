@@ -7,16 +7,16 @@
 #include "Message.h"
 
  
-const int X_pin = 32; // analog pin connected to X output
-const int Y_pin = 33; //analog pin connected to Y output
-const int SW_pin = 18; // digital pin connected to switch output
-const int Button_pin = 17; // digital pin connected to button
+int x = 32; // analog pin connected to X output
+int y = 33; //analog pin connected to Y output
+int sw = 18; // digital pin connected to switch output
+int b = 17; // digital pin connected to button
 bool a = true;
  
 // Creating a Udp connection including sendMessage method
 Message message = Message();
 // Creating a joystick object
-Joystick joystick = Joystick(X_pin, Y_pin, SW_pin, &message);
+Joystick joystick = Joystick(x, y, sw, &message);
 // Creating a button object
 Button button(Button_pin, &message);
  
