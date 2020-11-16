@@ -34,7 +34,7 @@ public:
     
      this->message = message;
  
-      this->X_pin= X_pin;
+     this->X_pin= X_pin;
      pinMode (this->X_pin, INPUT);
      this->Y_pin = Y_pin;
      pinMode (this->Y_pin, INPUT);
@@ -55,11 +55,11 @@ public:
  
    }
  
-       String movement(){
+  String movement(){
  
-         String m;
+     String m;
  
-     // To stop it repeatedly creating a new pixel.
+// To stop it repeatedly creating a new pixel.
  if(a == true){
  message-> sendMessage("command");
  //sendMessage("takeoff");
@@ -81,28 +81,27 @@ do {
  message-> sendMessage("land");
  Serial.print("Joystick Button Pressed");
  Serial.println("");
-  u8g2.setCursor(/* x=*/5, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
-  u8g2.print("LAND");
+  u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
+  u8g2.print("NOTHING");
  }
  if(joyY > 3000){
  message-> sendMessage("up " + speed);
- u8g2.setCursor(/* x=*/20, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
+ u8g2.setCursor(20,34); 
  u8g2.print("UP");
 }
 if(joyY < 1000){
  message-> sendMessage("down " + speed);
- //sendMessage("flip b");
- u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
+ u8g2.setCursor(0,34);   
   u8g2.print("DOWN");
 }
 if(joyX > 3000){
  message-> sendMessage("right " + speed);
- u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
+ u8g2.setCursor(0,34);   
   u8g2.print("RIGHT");
 }
 if(joyX < 1000){
 message->  sendMessage("left " + speed);
- u8g2.setCursor(/* x=*/0, /* y=*/34);    //Define the cursor of print function, any output of the print function will start at this position.
+ u8g2.setCursor(0,34);    
   u8g2.print("LEFT");
 }
  } while ( u8g2.nextPage() );
