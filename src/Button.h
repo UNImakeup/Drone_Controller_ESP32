@@ -40,11 +40,11 @@ class Button{
    String m;
  
      if (B == 0){
-         message->sendMessage("takeoff");
+         message->sendMessage("w");
         // u8g2.setFont(u8g2_font_ncenB08_tr);
-         Serial.println("Button pressed");
-         //u8g2.setCursor(/* x=*/20, /* y=*/0);    //Define the cursor of print function, any output of the print function will start at this position.
-        // u8g2.print("TAKEOFF");
+         Serial.println("Create Button");
+         //u8g2.setCursor(/* x=*/20, /* y=*/0);   
+       
     
      }   return m;
   }
